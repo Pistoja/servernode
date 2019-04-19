@@ -5,11 +5,6 @@
   "main": "index.js",
   "scripts": {
     "start": "node index.js",
-    "start:dev": "npm run express",
-    "express": "node express.js",
-    "copy": "mv dev.js.bk dev.js",
-    "serve": "npm start",
-    "dev": "node dev.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
