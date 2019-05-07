@@ -32,5 +32,29 @@ router.get('/:id/', (req, res) => {
   res.json(characters.characters.filter(personaggio => personaggio.id === id))
 })
 
+//metodo post
+router.post('/form', (req,res) => {
+  const body = req.body
+  const {
+    nome,
+    cognome,
+    occupazione,
+    tel
+  } = req.body
+
+  const status ={}
+  console.log(nome, cognome, occupazione, tel)
+  if(nome){
+    status.code = 'ok'
+    status.message = `Benvenuto ${nome}`
+  } else
+  { status.code = 'error'
+    status.message = 'nome non valido'
+    status.campo = 'nome'
+
+  } 
+  res.send(status)
+})
+
 
 module.exports = router
