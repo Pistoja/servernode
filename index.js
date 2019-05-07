@@ -15,4 +15,8 @@ app.use(myLogger);
 app.use('/users', users)
 app.use('/personaggi', personaggi)
 
+app.use((req, res) => {
+    res.status(404).send('What???')
+});
+
 app.listen(port)
