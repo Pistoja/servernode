@@ -12,11 +12,12 @@ const myLogger = (req, res, next) => {
 
 app.use(myLogger);
 
-app.use('/users', users)
-app.use('/personaggi', personaggi)
+app.use('/v0.1/users', users)
+app.use('/v0.1/personaggi', personaggi)
+app.use('/v0.2/personaggi', personaggi)
+
 
 app.use((req, res) => {
     res.status(404).send('What???')
 });
-
 app.listen(port)
