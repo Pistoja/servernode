@@ -3,7 +3,7 @@ const router = express.Router();
 const characters = require('../data/characters')
 // QUery
 // chiedi http://localhost:7070/personaggi?colore=giallo&sesso=m
-/*
+//
 router.get('/', (req, res, next) => {
     const query = req.query
     let personaggi = characters.characters
@@ -57,9 +57,9 @@ router.post('/form', (req,res) => {
   res.send(status)
 })
 
-
+//
 module.exports = router
-*/
+
 exports.name = 'Zeus';
 Code:
 var personaggi = require('./personaggi');
